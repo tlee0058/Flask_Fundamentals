@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+
+</head>
+<body>
+    <div id="wrapper">
+        <form id="new-dojo" action="/add" method="post">
+            <label for="name">Your Name: </label>
+            <input type="text" name="name">
+            <label for="location">Dojo Location: </label>
+            <select name="location">
+                <option value="San Jose">San Jose</option>
+                <option value="Washington DC">Washington DC</option>    
+            </select>
+            <label for="language">Favorite Language:</label>
+            <select name="language">
+                <option value="Python">Python</option>
+                <option value="Javascript">Javascript</option>
+            </select>
+            <label for="comment">Comment(optional):</label>
+            <textarea name="desc"></textarea></p>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>
