@@ -1,0 +1,12 @@
+.container {
+    width: 900px;
+    background-color: lightgrey;
+    
+    
+}
+
+h1, h4{
+    display: inline-block;
+    
+    text-align: center;
+}
