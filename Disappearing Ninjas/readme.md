@@ -17,3 +17,4 @@ If user visits /ninja/blue, it should only display the Ninja Turtle Leonardo.
 If a user tries to hack into your web app by specifying a color or string combination other than the colors (Blue, Orange, Red, and Purple), example: /ninja/black or /ninja/123, then display the image notapril.jpg
 You'll need to remember how to use static files for this assignment. Take a minute to refresh your memory back to the static files section if you need to :)
 Click here to download the image files.
+a
