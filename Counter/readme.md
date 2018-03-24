@@ -11,3 +11,4 @@ Add a +2 button underneath the counter that reloads the page and increments coun
 
 Ninja Level 2
 Add a reset button that resets the counter back to 1. Add another route to handle this functionality.
+s
