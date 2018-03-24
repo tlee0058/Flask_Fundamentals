@@ -13,3 +13,4 @@ This route should serve a view file called dojos.html and have a form. Don't wor
 
 Next Steps
 Create a folder inside of your project labeled static. This static folder will be used to serve all of our static content, such as stylesheets, images, and javascript files! Now place a stylesheet in the static folder and reference it in our view files (templates).
+s
