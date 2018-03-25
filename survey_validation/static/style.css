@@ -1,0 +1,22 @@
+#wrapper {
+    width: 400px;
+    margin: 20px 100px auto 100px;
+    padding: 20px;
+    border: 1px solid black;
+}
+
+
+.error{
+    color:red;
+}
+
+.display{
+    display: inline-block;
+    width: 250px;
+    color: blue;
+}
+
+input[type="submit"]{
+    background-color: blue;
+    color: white;
+}
