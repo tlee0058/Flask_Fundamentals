@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/ninja_gold.css') }}">
+</head>
+<body>
+    <div id="wrapper">
+        <p>Your Gold: <input type="text" value="{{rt}}"><!--add field later-->
+        <div class="all_group">
+            <h4>Farm</h4>
+            <h4>(earns 10-20 golds)</h4>
+            <form action="/process_money", method="post">
+                <input type="hidden" name="building" value="farm">
+                <input type="submit" value="Find Gold!">
+            </form>
+        </div>
+
+        <div class="all_group">
+            <h4>Cave</h4>
+            <h4>(earns 5-10 golds)</h4>
+            <form action="/process_money", method="post">
+                <input type="hidden" name="building" value="cave">
+                <input type="submit" value="Find Gold!">
+            </form>
+        </div>
+        <div class="all_group">
+            <h4>House</h4>
+            <h4>(earns 2-5 golds)</h4>
+            <form action="/process_money", method="post">
+                <input type="hidden" name="building" value="house">
+                <input type="submit" value="Find Gold!">
+            </form>
+        </div>
+        <div class="all_group">
+            <h4>Casino</h4>
+            <h4>(earns/takes 0-50 golds)</h4>
+            <form action="/process_money", method="post">
+                <input type="hidden" name="building" value="casino">
+                <input type="submit" value="Find Gold!">
+            </form>
+        </div>
+        <div id="activities">
+            <p>Activities:</p>
+            <textarea name="desc" cols = "100" rows="10">
+                {% for i in desc %}
+                    {{i}}
+                {% endfor %}
+            </textarea>
+        </div>
+        <a href="/reset"><Button>Reset</Button></a>
+    </div>
+</body>
+</html>
