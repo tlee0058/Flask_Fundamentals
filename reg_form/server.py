@@ -9,42 +9,38 @@ EMAIL_REGEX = re.compile(r'^[a-zA-Z0-9.+_-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]+$')
 def index():
     if 'counter' not in session:
         session['counter'] = 0
-
-
-    
     return render_template('index.html')
 
 @app.route('/register', methods=['POST'])
 def register():
-    session['email'] = request.form['email']
-
+    errors = False
     if not EMAIL_REGEX.match(request.form['email']):
         flash("Invalid email")
+        errors = True
     if len(request.form['first_name']) < 1 or len(request.form['last_name']) < 1:
         flash("First name or last name cannot be blank")
+        errors = True
     if request.form['password'] != request.form['confirm_pw']:
         flash("Passwords do not match")
-
-    
+        errors = True
     if len(request.form['password']) < 1:
-
         flash("Password cannot be blank")
-
+        errors = True
     else:
         if len(request.form['password']) < 8:
             flash("Password must be at least 8 characters")
+            errors = True
         else:
             if request.form['password'].isalpha():
                 flash("Password must be at least one number")
+                errors = True
             if request.form['password'].islower():
                     flash("Password must have at least one uppercase")
-
-                
-
-    flash("Thank you for submitting the form") 
-
-
-    session['counter'] += 1
+                    errors = True
+    
+    if errors == False:
+        session['counter'] += 1
+        flash("Thank you for submitting the form") 
     return redirect ('/')
 
 
