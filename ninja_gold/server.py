@@ -1,4 +1,4 @@
-from flask import Flask, render_template, redirect, request, session, url_for
+from flask import Flask, render_template, redirect, request, session
 app = Flask(__name__)
 app.secret_key = "secret"
 import random, datetime
